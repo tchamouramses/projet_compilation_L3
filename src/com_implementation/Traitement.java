@@ -58,7 +58,6 @@ public class Traitement implements Nos_fonctions, verification{
     @Override
 	public int priorite(char op) {
 		// TODO Auto-generated method stub
-		
 		if(op=='|')
 			return 3;
 		else if(op=='.')
@@ -66,8 +65,6 @@ public class Traitement implements Nos_fonctions, verification{
 		//dans le cas ou on a le *
 		else
 			return 6;
-		
-		
 	}
 
     @Override
@@ -127,8 +124,6 @@ public class Traitement implements Nos_fonctions, verification{
 					}
 					//on enleve la parentheses ouvrante
 					pile.pop();
-					
-					
 				}	
 				else if(priorite(pile.peek().getValeur())>=priorite(stock.getValeur())) {
 					do {
@@ -140,8 +135,6 @@ public class Traitement implements Nos_fonctions, verification{
 				else if(priorite(pile.peek().getValeur())<priorite(stock.getValeur())) {
 					pile.push(stock);
 				}
-							
-				
 			}
 		}
 		//lorsquon na fini avec le parcour
